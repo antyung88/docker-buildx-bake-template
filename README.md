@@ -18,6 +18,7 @@ mv buildx-$LATEST.linux-amd64 ~/.docker/cli-plugins/docker-buildx
 
 Edit docker-bake.hcl 
 ```
+# Defines Group
 group "main" {
   targets = [
     "1",
@@ -26,21 +27,23 @@ group "main" {
     ]
 }
 
+# Defines Dockerfile Target 
 target "1" {
   dockerfile = "./1.Dockerfile"
-  tags = ["1local"]
+  tags = ["local1:latest"]
 }
 
 target "2" {
   dockerfile = "./2.Dockerfile"
-  tags = ["2local"]
+  tags = ["local2:latest"]
 }
 
+# Contexts -- depends_on
 target "3" {
   dockerfile = "./3.Dockerfile"
   contexts = {
-    1local = "target:1"
-    2local = "target:2"
+    local1 = "target:1"
+    local2 = "target:2"
   }
 }
 ```
