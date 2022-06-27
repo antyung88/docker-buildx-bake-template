@@ -8,12 +8,12 @@ group "main" {
 
 target "1" {
   dockerfile = "./1.Dockerfile"
-  tags = ["1local"]
+  tags = ["local1:latest"]
 }
 
 target "2" {
   dockerfile = "./2.Dockerfile"
-  tags = ["2local"]
+  tags = ["local2:latest"]
 }
 
 target "3" {
