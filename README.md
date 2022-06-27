@@ -47,3 +47,7 @@ target "3" {
   }
 }
 ```
+Run
+```
+docker buildx bake main
+```
