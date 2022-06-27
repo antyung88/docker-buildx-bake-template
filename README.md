@@ -1,4 +1,4 @@
-# docker-buildx-bake-template
+# docker-buildx-bake-template [![Test Image](https://github.com/antyung88/docker-buildx-bake-template/actions/workflows/master.yml/badge.svg)](https://github.com/antyung88/docker-buildx-bake-template/actions/workflows/master.yml)
 Docker Buildx Bake Template With Contexts 
 
 # Prerequisites
